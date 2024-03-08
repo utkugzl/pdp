@@ -1,6 +1,6 @@
 package odev;
 import java.util.UUID;
-public class Motor {
+public class Test_1 {
     private String motorNo;
     private boolean calisiyor;
     /**

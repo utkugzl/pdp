@@ -1,0 +1,89 @@
+package odev;
+import java.util.UUID;
+public class Test_4 {
+    private String motorNo;
+    private boolean calisiyor;
+    /**
+    * Varsayılan kurucu fonksiyon
+    */
+    public Motor() {
+        this.motorNo = UUID.randomUUID().toString();
+        /* Başlangıçta false */calisiyor = false;
+
+    }
+    /**
+    *
+    * @param motorNo UUID olarak motor id
+    * @return motor instance
+    */
+    public Motor(String motorNo) {
+    /*
+    * Varolan bir motor no ile oluşturuluyor.
+    */
+    this.motorNo = motorNo;
+    calisiyor = false; // false yapılıyor
+    }   
+    public void calistir() {
+    /**
+    * calisiyor true yapılıyor
+    */
+    calisiyor = true;
+    }
+    /**
+    * Motorun durdurulması //
+    */
+    public void durdur() {
+    calisiyor = false;
+    }
+    public String getMotorNo() {
+    // motor no getir
+    return motorNo;
+    }
+    @Override
+    public String toString() {
+    // durum belirlenmesi //
+    String durum = calisiyor ? "Motor Çalışıyor." : "Motor Çalışmıyor";
+    return durum;
+    }
+
+    public Motor2() {
+        this.motorNo = UUID.randomUUID().toString();
+        /* Başlangıçta false */calisiyor = false;
+
+    }
+    /**
+    *
+    * @param motorNo UUID olarak motor id
+    * @return motor instance
+    */
+    public Motor2(String motorNo) {
+    /*
+    * Varolan bir motor no ile oluşturuluyor.
+    */
+    this.motorNo = motorNo;
+    calisiyor = false; // false yapılıyor
+    }   
+    public void calistir2() {
+    /**
+    * calisiyor true yapılıyor
+    */
+    calisiyor = true;
+    }
+    /**
+    * Motorun durdurulması //
+    */
+    public void durdur2() {
+    calisiyor = false;
+    }
+    public String getMotorNo() {
+    // motor no getir
+    return motorNo;
+    }
+    @Override
+    public String toString2() {
+    // durum belirlenmesi //
+    String durum = calisiyor ? "Motor Çalışıyor." : "Motor Çalışmıyor";
+    return durum;
+    }
+    // public void calistir() 
+}
